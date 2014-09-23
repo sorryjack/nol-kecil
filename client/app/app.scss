@@ -1,0 +1,52 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+@import 'bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+
+/**
+ * App-wide Styles
+ */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'account/login/login.scss';
+@import 'admin/admin.scss';
+@import 'main/main.scss';
+@import 'tools/basic/basic.scss';
+@import 'tools/prodin/prodin.scss';
+@import 'tools/tools.scss';
+@import 'navbar/navbar.scss';
+@import 'sidebar/sidebar.scss';
+// endinjector
+
+
+
+// CUSTOM - CUSTOM //
+
+/** @import '../assets/web-fonts/web-fonts.scss';
+	*	@include web-fonts(("Droid Sans"));
+	*/
+
+
+body{
+	//font-family: 'Droid Sans', sans-serif;
+	color: #737373;
+	background: #ECF0F1;
+	overflow-y: scroll;
+	margin-top: 70px;
+}
+a{
+	color: #2E4259;
+	&:hover,&:focus{
+		color: #03C8FA;
+		text-decoration: none;
+	}
+}
