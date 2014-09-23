@@ -1,3 +1,31 @@
 <div class="col-md-12">
-This is the basic view.
+	<form ng-submit="getInfo()">
+	  <p class="input-group">
+	    <input ng-model="aviName" type="text" class="form-control" placeholder="Imvu avatar name here">
+	    <span class="input-group-btn">
+	      <button type="submit" class="btn btn-primary">Check</button>
+	    </span>
+	  </p>
+	</form>
+	<div class="container-fluid basic-results">
+		<div class="success col-md-12" ng-hide="!results"> <!-- ng-hide="!results" -->
+				<div style="display:table">
+					<div class="results-image">
+						<img class="thumbnail" ng-src="{{results.picUrl}}" />
+					</div>
+					<div class="results-details">
+						<p>Name <strong>{{results.avatarName}}</strong> <span>User ID <strong>{{results.userId}}</strong></span></p>
+						<p>Creation date <span>{{results.accountCreationDate}}</span></p>
+						<p>Guest_ prefix <span>{{results.isGuest}}</span></p>
+						<p>Verified email <span>{{results.verifiedEmail}}</span></p>
+						<p>Access Pass <span>{{results.hasAccessPass}}</span></p>
+					</div>
+				</div>
+		</div>
+		<div class="failed" ng-hide="!faults">
+			<p class="code"> error code <h1>{{faults.faultCode}}</h1></p>
+			<p class="string">{{faults.faultString}}</p>
+
+		</div>
+	</div>
 </div>

@@ -1,0 +1,29 @@
+.aside{
+	background:#fff;
+	width: 200px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 2000;
+	.aside-header{
+		height:50px;
+		background: #2E4259;
+		h4{
+			color: #ECF0F1;
+			margin-top:0;
+			padding: 13px 13px 0 13px;
+		}
+		button.close{
+			color: #ECF0F1;
+			opacity: 1;
+			padding: 13px 13px 0 13px;
+			text-shadow: 0 0 0 #0;
+		}
+	}
+}
+.am-fade.aside-backdrop,.am-fade.modal-backdrop {
+background-color: rgba(0,0,0,1);
+position: fixed;
+top:0;
+bottom:0;
+}

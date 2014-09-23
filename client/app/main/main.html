@@ -2,37 +2,25 @@
 
 <header class="hero-unit" id="banner">
   <div class="container-fluid">
-    <h1>HERO UNIT</h1>
-    <p class="lead"></p>
+    <div class="col-md-9">
+      <h1 class="logo">NOL<span>kecil</span><small>Beta</small></h1>
+      <p class="lead"></p>
+    </div>
+    <div class="col-md3">
+      <p>social badge here</p>
+    </div>
   </div>
 </header>
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-2" ng-include="'components/sidebar/sidebar.html'"></div>
+    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs" ng-include="'components/sidebar/sidebar.html'"></div>
+    <div class="col-lg-10 col-md-10 col-sm-10">
+      <h1 class="page-header">News & Update</h1>
+      <div class="news col-md-12">
 
-    <div class="col-lg-10">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
-      </ul>
-      <form class="thing-form">
-        <label>Syncs in realtime across clients</label>
-        <p class="input-group">
-          <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
-          <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
-          </span>
-        </p>
-      </form>
+      </div>
     </div>
   </div>
 </div>
-
-<footer class="footer">
-  <div class="container-fluid">
-      <p>
-        NOL<span style="text-decoration:underscore">kecil</span> &copy; 2014 <a href="https://twitter.com/tuxarmy">@tuxarmy</a>
-      </p>
-  </div>
-</footer>
+<div ng-include="'components/footer/footer.html'"></div>

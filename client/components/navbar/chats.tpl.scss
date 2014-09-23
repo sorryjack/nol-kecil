@@ -1,0 +1,59 @@
+.popover{
+	width: 300px;
+	height: 300px;
+	&.bottom > .arrow:after{
+		border-bottom-color: #ECF0F1;
+	}
+	.popover-content{
+		padding: 0;
+		.chatboard{
+			list-style: none;
+			position: absolute;
+			top: 35px;
+			bottom: 35px;
+			left: 0;
+			max-width: 100%;
+			padding: 0 3px 0 3px;
+			overflow-y: auto;
+			.chat-list{
+				.sender{
+					font-weight: bold;
+					color: #2E4259;
+				}
+				.chat-content{
+					font-size: 0.9em;
+					a{
+						color: #06A1C8;
+						&:hover,&:focus{
+							color: #03C8FA;
+							background: transparent;
+							text-decoration: underline;
+							-webkit-box-shadow: inset 0 -3px 0 0 rgba(41, 58, 77, 0);
+							-moz-box-shadow:    inset 0 -3px 0 0 rgba(41, 58, 77, 0);
+							box-shadow:         inset 0 -3px 0 0 rgba(41, 58, 77, 0);
+						}
+					}
+				}
+			}
+		}
+		.inputboard{
+			position: absolute;
+			left: 3px;
+			right: 3px;
+			bottom: 0px;
+			p{
+				margin: 0 0 3px;
+			}
+		}
+	}
+	.nickset{
+		position: absolute;
+		top:0;
+		left: 0;
+		right:0;
+		bottom:0;
+		padding-top: 100px;
+		background: #ECF0F1;
+		z-index: 9999;
+	}
+}
