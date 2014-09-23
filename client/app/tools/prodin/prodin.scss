@@ -1,0 +1,23 @@
+.prodin-results{
+	margin-top: 20px;
+	.results-image{
+		width: 110px;
+		float: left;
+	}
+	.results-details{
+		float: left;
+		min-width: 280px;
+		max-width: 400px;
+		height: 90px;
+		margin-left: 10px;
+		padding: 5px;
+		background: #fff;
+		span {
+			float:right;
+		}
+	}
+	.failed{
+		text-align: center;
+		color: #F7483B;
+	}
+}

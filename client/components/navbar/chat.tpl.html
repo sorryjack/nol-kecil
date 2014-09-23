@@ -1,0 +1,32 @@
+<div class="popover" ng-controller="ChatCtrl">
+  <div class="arrow"></div>
+  <h3 class="popover-title">Chat Area</h3>
+  <div class="popover-content">
+  	<ul class="chatboard" scroll-glue>
+  		<li class="chat-list" ng-repeat="c in chats">
+        <div class="sender">{{c.from}}</div>
+        <div class="chat-content" ng-bind-html="c.content | linky: '_blank'"></div>
+      </li>
+  	</ul>
+  	<form class="inputboard">
+      <p class="input-group">
+        <input type="text" class="form-control" placeholder="Type to chat..." ng-model="newChat">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary" ng-click="sendChat()">Send</button>
+        </span>
+      </p>
+    </form>
+  </div>
+  <div ng-hide="nick" class="nickset">
+  {{newNick}}
+		<form class="inputboard" ng-submit="setNick()">
+			<label>Set your nickname to participate in chat</label>
+      <p class="input-group">
+        <input type="text" class="form-control" placeholder="nickname" ng-model="newNick">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary">Set Nick</button>
+        </span>
+      </p>
+    </form>
+  </div>
+</div>

@@ -1,3 +1,30 @@
 <div class="col-md-12">
-This is the prodin view.
+	<form ng-submit="getInfo()">
+	  <p class="input-group">
+	    <input ng-model="prodid" type="text" class="form-control" placeholder="Imvu Product ID here...">
+	    <span class="input-group-btn">
+	      <button type="submit" class="btn btn-primary">Check</button>
+	    </span>
+	  </p>
+	</form>
+	<div class="container-fluid prodin-results">
+		<div class="success col-md-12" ng-hide="!results"> <!-- ng-hide="!results" -->
+			<h2>Results imvu product with ID {{results.products_id}} </h2>
+			<div style="display:table">
+				<div class="results-image">
+					<img class="thumbnail" ng-src="{{results.products_image}}" />
+				</div>
+				<div class="results-details">
+
+					<p>{{results.products_name}}</p>
+					<p>creator <span>{{results.manufacturers_id}}</span></p>
+					<p>category id <span>{{results.categories_id}}</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="failed" ng-hide="!faults">
+			<p class="code"> error code <h1>{{faults.faultCode}}</h1></p>
+			<p class="string">{{faults.faultString}}</p>
+		</div>
+	</div>
 </div>
