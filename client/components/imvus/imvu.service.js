@@ -2,8 +2,8 @@
 
 angular.module('nolKecilApp')
   .factory('imvus', function($http){
-//    var imvu = 'http://imvus.comule.com/';
-    var imvu = 'http://localhost/imvu/';
+    var imvu = 'http://imvus.comule.com/';
+//    var imvu = 'http://localhost/imvu/';
     var obj = {};
 
     obj.manual = function(){
