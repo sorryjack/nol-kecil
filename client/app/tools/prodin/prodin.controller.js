@@ -10,7 +10,7 @@ angular.module('nolKecilApp')
     	}
     	imvus.productInfo($scope.prodid).then(function(data){
     		console.log(data.data);
-    		if (data.data.products_id) {
+    		if (data.data.denomination) {
     			$scope.faults = '';
     			$scope.results = data.data;
     		} else {
