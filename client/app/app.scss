@@ -20,9 +20,12 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
+@import 'man/man.scss';
 @import 'tools/basic/basic.scss';
 @import 'tools/prodin/prodin.scss';
 @import 'tools/tools.scss';
+@import 'navbar/aside.tpl.scss';
+@import 'navbar/chats.tpl.scss';
 @import 'navbar/navbar.scss';
 @import 'sidebar/sidebar.scss';
 // endinjector
@@ -35,9 +38,18 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 	*	@include web-fonts(("Droid Sans"));
 	*/
 
+@import '../assets/web-fonts/web-fonts.scss';
+@include web-fonts(("Droid Sans"));
+
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
 
 body{
-	//font-family: 'Droid Sans', sans-serif;
+	font-family: 'Droid Sans', sans-serif;
 	color: #737373;
 	background: #ECF0F1;
 	overflow-y: scroll;

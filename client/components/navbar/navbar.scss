@@ -5,6 +5,16 @@ $color-nav-bg: #ECF0F1;
 	-webkit-box-shadow: inset 0 -3px 0 0 rgba(41, 58, 77, 0.5);
 	-moz-box-shadow:    inset 0 -3px 0 0 rgba(41, 58, 77, 0.5);
 	box-shadow:         inset 0 -3px 0 0 rgba(41, 58, 77, 0.5);
+	.navbar-toggle{
+		float: left;
+		border: 0;
+		.icon-bar{
+			background-color: #ECF0F1;
+		}
+		&:hover, &:focus{
+			background-color: #293A4D;
+			}
+		}
 	.logo{
 		a{
 			color: #03C8FA;

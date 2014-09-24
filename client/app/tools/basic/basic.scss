@@ -1,0 +1,23 @@
+.basic-results{
+	margin-top: 20px;
+	.results-image{
+		width: 170px;
+		float: left;
+	}
+	.results-details{
+		float: left;
+		min-width: 280px;
+		max-width: 400px;
+		height: 230px;
+		margin-left: 10px;
+		padding: 20px;
+		background: #fff;
+		span {
+			float:right;
+		}
+	}
+	.failed{
+		text-align: center;
+		color: #F7483B;
+	}
+}

@@ -7,7 +7,8 @@ angular.module('nolKecilApp', [
   'ngAnimate',
   'btford.socket-io',
   'ui.router',
-  'mgcrea.ngStrap'
+  'mgcrea.ngStrap',
+  'luegg.directives'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
