@@ -2,5 +2,5 @@
 
 angular.module('nolKecilApp')
   .controller('ToolsCtrl', function ($scope) {
-    $scope.message = 'Hello';
+  	$scope.message='';
   });

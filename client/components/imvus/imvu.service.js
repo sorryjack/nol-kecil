@@ -2,8 +2,9 @@
 
 angular.module('nolKecilApp')
   .factory('imvus', function($http){
+      var imvu = 'http://imvus.url.ph/';
 //    var imvu = 'http://imvus.comule.com/';
-    var imvu = 'http://localhost/imvu/';
+//    var imvu = 'http://localhost/imvu/';
     var obj = {};
 
     obj.manual = function(){
@@ -18,6 +19,10 @@ angular.module('nolKecilApp')
       return $http.get(imvu + 'productInfo?pid=' + pid);
     };
 
-
+    obj.reveal = function(link){
+      return $http.get(imvu+'voyeur?'+ link).then(function(results){
+        return results;
+      });
+    };
     return obj;
   });
