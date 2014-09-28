@@ -8,10 +8,12 @@ angular.module('nolKecilApp', [
   'btford.socket-io',
   'ui.router',
   'mgcrea.ngStrap',
-  'luegg.directives'
+  'luegg.directives',
+  'cgBusy'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
+      .when("/tools", "/tools/basic")
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
