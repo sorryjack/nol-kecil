@@ -10,7 +10,7 @@ angular.module('nolKecilApp')
   		}
       var decUrl = decodeURIComponent($scope.sceneUrl);
 
-      decUrl = decUrl.replace(/x2/gi, "");
+      decUrl = decUrl.replace(/x2/gi, '');
       decUrl = decUrl.slice(6);
       var urlArray = decUrl.split('?');
 

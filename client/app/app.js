@@ -13,7 +13,7 @@ angular.module('nolKecilApp', [
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
-      .when("/tools", "/tools/basic")
+      .when('/tools', '/tools/basic')
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
