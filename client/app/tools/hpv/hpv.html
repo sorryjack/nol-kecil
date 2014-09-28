@@ -8,15 +8,15 @@
 	    </span>
 	  </p>
 	</form>
-	<div style="min-height:100%" class="container-fluid hpv-results">
-		<div class="success col-md-12" ng-hide="!results" ng-repeat="(key,value) in results"> <!-- ng-hide="!results" -->
+	<div style="min-height:100%;" class="container-fluid hpv-results" cg-busy="promise">
+		<div class="success col-md-12" ng-hide="!results" ng-repeat="(key, value) in results"> <!-- ng-hide="!results" -->
 			<h1>Products worn by {{key}}</h1>
 				<div class="col-md-4" ng-repeat="p in value">
 					<img class="pull-left thumbnail" ng-src="{{p.products_image}}">
 					<div class="pull-left results-details">
-						<h1> {{p.products_name}} </h1>
+						<h1> product name </h1>
 						<span>
-							<a href="http://www.imvu.com/shop/product.php?products_id={{p.products_id}}" target="_blank" class="btn btn-danger">to product page</a>
+							<a href="http://www.imvu.com/shop/product.php?products_id=#" target="_blank" class="btn btn-danger">to product page</a>
 						</span>
 					</div>
 				</div>

@@ -12,12 +12,18 @@ angular.module('nolKecilApp')
 
       decUrl = decUrl.replace(/x2/gi, "");
       decUrl = decUrl.slice(6);
-
       var urlArray = decUrl.split('?');
 
-      imvus.reveal(urlArray[1]).then(function(data){
-        $scope.results = data.data;
+      $scope.promise = imvus.reveal(urlArray[1]).then(function(data){
+        if (data.data instanceof Object) {
+          console.log(data.data);
+          $scope.results = data.data;
+          $scope.faults = false;
+        }else{
+          $scope.faults = 'error';
+          $scope.results = false;
+        }
+        $scope.sceneUrl = '';
       });
-      $scope.sceneUrl = '';
   	};
   });
